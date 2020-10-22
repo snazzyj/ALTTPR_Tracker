@@ -6,16 +6,13 @@ class Dungeons extends Component {
     static contextType = ALTTPRContext;
 
     changeIndexValue = (name) => {
-        console.log('clicked')
         // eslint-disable-next-line array-callback-return
         return Dng_Icons.find((dng) => {
-            console.log('finding dng')
             if(dng.name === name) {
                 if(dng.index + 1 === dng.reward.length) {
                     dng.index = 0;
                     this.forceUpdate();
                 } else {
-                    console.log('found it, increasing index value by 1')
                     dng.index += 1;
                     this.forceUpdate();
                 }
