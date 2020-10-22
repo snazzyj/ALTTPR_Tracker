@@ -16,77 +16,242 @@ const dng_icons = [
         nickname: 'EP',
         src: Eastern_Palace,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Desert_Palace',
         nickname: 'DP',
         src: Desert_Palace,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Tower_of_Hera',
         nickname: 'TH',
         src: Tower_of_Hera,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Palace_of_Darkness',
         nickname: 'POD',
         src: Palace_of_Darkness,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Swamp_Palace',
         nickname: 'SP',
         src: Swamp_Palace,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Skull_Woods',
         nickname: 'SW',
         src: Skull_Woods,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Thieves_Town',
         nickname: 'TT',
         src: Thieves_Town,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Ice_Palace',
         nickname: 'IP',
         src: Ice_Palace,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Misery_Mire',
         nickname: 'MM',
         src: Misery_Mire,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Turtle_Rock',
         nickname: 'TR',
         src: Turtle_Rock,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
     {
         name: 'Ganons_Tower',
         nickname: 'GT',
         src: Ganons_Tower,
         default_class: 'dng',
-        status: 'locked'
+        status: 'locked',
+        index: 0,
+        reward: [
+            {
+                name: 'Crystal'
+            },
+            {
+                name: 'Green Pendant'
+            },
+            {
+                name: 'Red Pendant'
+            },
+            {
+                name: 'Blue Pendant'
+            },
+        ]
     },
 ]
 
