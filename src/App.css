@@ -1,10 +1,9 @@
+/* html {
+  overflow: hidden;
+} */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  margin-top: 10px;
 }
 
 li {
@@ -20,32 +19,53 @@ li {
   opacity: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dng {
+  width: 150px;
+  height: 125px;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.locked {
+  background-color: red;
+  width: 100%;
+  height: 10px;
+}
+
+.beatable {
+  background-color: yellow;
+  width: 100%;
+  height: 10px;
+}
+
+.unlocked {
+  background-color: green;
+  width: 100%;
+  height: 10px;
+}
+
+.dng_list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dng_list > div {
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map_overview {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.map_overview > div {
+  width: 45%;
+  margin: 10px;
+}
+
+.map_overview > div > img {
+  width: 100%;
+  height: 85%;
 }
