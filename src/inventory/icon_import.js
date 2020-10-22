@@ -1,4 +1,4 @@
-import Bow from '../assests/icons/ALttP_Bow_&_Arrows_Sprite.png';
+import Bow from '../assests/icons/BowALttP.png';
 import Silvers from "../assests/icons/ALttP_Bow_&_Silver_Arrows_Sprite.png"
 import Blue_Boomerang from '../assests/icons/ALttP_Boomerang_Sprite.png';
 import Red_Boomerang from '../assests/icons/ALttP_Magical_Boomerang_Sprite.png'
@@ -26,17 +26,8 @@ import Cane_of_Byrna from '../assests/icons/ALttP_Cane_of_Byrna_Sprite.png'
 import Magic_Cape from '../assests/icons/ALttP_Magic_Cape_Sprite.png'
 import Mirror from '../assests/icons/ALttP_Magic_Mirror_Sprite.png'
 import Book from '../assests/icons/ALttP_Book_of_Mudora_Sprite.png'
-import Fighter_Sword from "../assests/icons/ALttP_Fighter's_Sword_Sprite.png"
-import Master from '../assests/icons/ALttP_Master_Sword_Sprite.png'
-import Tempered from '../assests/icons/ALttP_Master_Sword_Lv2_Sprite.png'
-import Butter from '../assests/icons/ALttP_Master_Sword_Lv3_Sprite.png'
-import Fighter_Shield from "../assests/icons/ALttP_Fighter's_Shield_Sprite.png"
-import Red_Shield from '../assests/icons/ALttP_Red_Shield_Sprite.png'
-import Mirror_Shield from '../assests/icons/ALttP_Mirror_Shield_Sprite.png'
-import Green_Mail from '../assests/icons/ALttP_Green_Clothes_Sprite.png'
-import Blue_Mail from '../assests/icons/BlueMail_Sprite.png'
-import Red_Mail from '../assests/icons/RedMail_Sprite.png'
 import Agahnim from '../assests/icons/ALttP_Agahnim_Sprite.png'
+
 
 const Icons = [
     {
@@ -180,60 +171,10 @@ const Icons = [
         found: false
     },
     {
-        name: 'Fighter_Sword',
-        src: Fighter_Sword,
-        found: false
-    },
-    {
-        name: 'Master',
-        src: Master,
-        found: false
-    },
-    {
-        name: 'Tempered',
-        src: Tempered,
-        found: false
-    },
-    {
-        name: 'Butter',
-        src: Butter,
-        found: false
-    },
-    {
-        name: 'Fighter_Shield',
-        src: Fighter_Shield,
-        found: false
-    },
-    {
-        name: 'Red_Shield',
-        src: Red_Shield,
-        found: false
-    },
-    {
-        name: 'Mirror_Shield',
-        src: Mirror_Shield,
-        found: false
-    },
-    {
-        name: 'Green_Mail',
-        src: Green_Mail,
-        found: false
-    },
-    {
-        name: 'Blue_Mail',
-        src: Blue_Mail,
-        found: false
-    },
-    {
-        name: 'Red_Mail',
-        src: Red_Mail,
-        found: false
-    },
-    {
         name: 'Agahnim',
         src: Agahnim,
         found: false
-    },
+    }
 ]
 
-export default Icons
+export default Icons;
