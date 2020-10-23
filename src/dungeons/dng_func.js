@@ -65,17 +65,15 @@ const dng_func = {
             }
         }
     },
-    misery_mire(cane_of_somaria, lantern, titans_mitt, flute, hookshot, boots, bombos, ether, quake) {
-        if (bombos || ether || quake) {
+    misery_mire(cane_of_somaria, lantern, titans_mitt, flute, hookshot, boots) {
             if (cane_of_somaria && lantern && flute && titans_mitt) {
                 if (hookshot || boots) {
-                    return this.beatable('MM')
+                    return this.unlocked('MM')
                 }
             }
-        }
+    
     },
-    turtle_rock(cane_of_somaria, lantern, titans_mitt, ice_rod, fire_rod, hammer, bombos, ether, quake) {
-        if (bombos || ether || quake) {
+    turtle_rock(cane_of_somaria, lantern, titans_mitt, ice_rod, fire_rod, hammer) {
             if (cane_of_somaria && ice_rod && fire_rod && titans_mitt && hammer) {
                 if(lantern) {
                     return this.unlocked('TR');
@@ -83,7 +81,6 @@ const dng_func = {
                     return this.beatable('TR')
                 }
             }
-        }
     },
     ganons_tower(boots, hammer, hookshot, cane_of_somaria, fire_rod, bow) {
         if (boots && hammer && hookshot && cane_of_somaria && fire_rod && bow) {

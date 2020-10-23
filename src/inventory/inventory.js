@@ -80,7 +80,7 @@ class Inventory extends Component {
         let armorName = upgradable_items.armor[armor_idx].name;
         let armorSrc = upgradable_items.armor[armor_idx].src;
         return (
-            <section>
+            <section className="inv">
                 {Icons.map((icon) => {
                     return <button key={icon.name} onClick={e => handleInventory(icon.name)} >
                         <img src={icon.src} alt={icon.name} className={icon.found ? 'color' : 'gray'} />
