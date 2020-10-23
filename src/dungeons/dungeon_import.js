@@ -9,6 +9,10 @@ import Ice_Palace from '../assests/icons/Ice_Palace.png';
 import Misery_Mire from '../assests/icons/Misery_Mire_Dungeon.png';
 import Turtle_Rock from '../assests/icons/TurtleRockHead(ALttP).png';
 import Ganons_Tower from "../assests/icons/Ganon's_Tower.png";
+import Crystal from '../assests/icons/Crystal.png';
+import Green_Pendant from '../assests/icons/ALttP_Pendant_of_Courage_Sprite.png';
+import Blue_Pendant from '../assests/icons/ALttP_Pendant_of_Power_Sprite.png';
+import Red_Pendant from '../assests/icons/ALttP_Pendant_of_Wisdom_Sprite.png';
 
 const dng_icons = [
     {
@@ -20,16 +24,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -42,16 +50,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -64,16 +76,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -86,16 +102,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -108,16 +128,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -130,16 +154,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -152,16 +180,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -174,16 +206,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -196,16 +232,20 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
@@ -218,41 +258,45 @@ const dng_icons = [
         index: 0,
         reward: [
             {
-                name: 'Crystal'
+                name: 'Crystal',
+                src: Crystal
             },
             {
-                name: 'Green Pendant'
+                name: 'Green Pendant',
+                src: Green_Pendant
             },
             {
-                name: 'Red Pendant'
+                name: 'Red Pendant',
+                src: Red_Pendant
             },
             {
-                name: 'Blue Pendant'
+                name: 'Blue Pendant',
+                src: Blue_Pendant
             },
         ]
     },
-    {
-        name: 'Ganons_Tower',
-        nickname: 'GT',
-        src: Ganons_Tower,
-        default_class: 'dng',
-        status: 'locked',
-        index: 0,
-        reward: [
-            {
-                name: 'Crystal'
-            },
-            {
-                name: 'Green Pendant'
-            },
-            {
-                name: 'Red Pendant'
-            },
-            {
-                name: 'Blue Pendant'
-            },
-        ]
-    },
+    // {
+    //     name: 'Ganons_Tower',
+    //     nickname: 'GT',
+    //     src: Ganons_Tower,
+    //     default_class: 'dng',
+    //     status: 'locked',
+    //     index: 0,
+    //     reward: [
+    //         {
+    //             name: 'Crystal'
+    //         },
+    //         {
+    //             name: 'Green Pendant'
+    //         },
+    //         {
+    //             name: 'Red Pendant'
+    //         },
+    //         {
+    //             name: 'Blue Pendant'
+    //         },
+    //     ]
+    // },
 ]
 
 export default dng_icons

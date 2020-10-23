@@ -17,6 +17,7 @@ class Inventory extends Component {
     }
 
     upgradeSword = () => {
+        const { handleInventory } = this.context;
         const {sword_idx, upgradable_items} = this.state;
         if(!upgradable_items.sword[0].found) {
             upgradable_items.sword[0].found = true;
@@ -24,12 +25,15 @@ class Inventory extends Component {
         if(upgradable_items.sword[0].found) {
             if(sword_idx + 1 === upgradable_items.sword.length) {
                 this.setState({
-                    sword_idx: 0
+                    sword_idx: 0,
                 })
             } else {
                 this.setState({
                     sword_idx: sword_idx + 1
                 })
+                if(upgradable_items.sword[sword_idx].name === 'Fighter_Sword' || upgradable_items.sword[sword_idx].name === 'Master') {
+                    handleInventory(upgradable_items.sword[sword_idx].name);
+                }
             }
         }
 
@@ -64,6 +68,7 @@ class Inventory extends Component {
     }
 
     render() {
+        // console.log(this.state);
         const { handleInventory } = this.context;
         const { upgradable_items, armor_idx, sword_idx, shield_idx } = this.state;
         let swordName = upgradable_items.sword[sword_idx].name;

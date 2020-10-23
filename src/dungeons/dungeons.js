@@ -27,8 +27,10 @@ class Dungeons extends Component {
                     return (
                     <div className='dng' key={dng.nickname}>
                         <div className={dng.status}></div>
-                        <img src={dng.src} alt={dng.nickname} className={dng.default_class}/>
-                        <button onClick={e => this.changeIndexValue(dng.name)}>{dng.reward[dng.index].name}</button>
+                            <img src={dng.src} alt={dng.nickname} className={dng.default_class}/>
+                        <button onClick={e => this.changeIndexValue(dng.name)} className="dng_reward">
+                            <img src={dng.reward[dng.index].src} alt={dng.reward[dng.index].name} />
+                        </button>
                     </div>
                     )
                 })}

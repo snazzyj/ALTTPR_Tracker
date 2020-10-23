@@ -23,14 +23,22 @@ class App extends Component {
     const { inventory } = this.state;
     let key = 'has' + name
     let item = inventory.find((icon) => icon.name === name);
-    this.setState({
-      [key]: item.found = true
-    }, () => {
-      this.checkLogic(item);
-    })
+    if(key === 'hasFighter_Sword' || key === 'hasMaster') {
+      this.setState({
+        [key]: true
+      }, () => {
+        this.checkLogic();
+      })
+    } else {
+      this.setState({
+        [key]: item.found = true
+      }, () => {
+        this.checkLogic();
+      })
+    }
   }
 
-  checkLogic = (item) => {
+  checkLogic = () => {
     this.checkDungeonLogic();
   }
 
@@ -41,9 +49,7 @@ class App extends Component {
            hasBombos, hasEther, hasQuake, hasLantern, hasCane_of_Somaria, hasMagic_Cape,
            hasMirror, hasFlute, hasBook, hasFighter_Sword, hasMaster} = this.state;
 
-    if (Dng_Func.eastern_palace(hasBow, hasLantern)) {
-
-    }
+    if (Dng_Func.eastern_palace(hasBow, hasLantern)) {this.forceUpdate()}
     if (Dng_Func.desert_palace(hasBook, hasPower_Glove, hasBoots, hasLantern, hasFire_Rod, hasFlute, hasTitans_Mitt, hasMirror)) {this.forceUpdate();}
     if (Dng_Func.tower_of_hera(hasLantern, hasFire_Rod, hasFighter_Sword, hasHammer, hasMirror, hasPower_Glove, hasHookshot, hasFlute)) {this.forceUpdate();}
     // if (Dng_Func.agahnim(hasMagic_Cape, hasMaster, hasFighter_Sword, hasLantern)) {}
