@@ -4,8 +4,10 @@ import Dungeons from '../src/dungeons/dungeons';
 import Map from '../src/map_overview/map';
 import Icons from '../src/inventory/icon_import';
 import Bosses from '../src/bosses/bosses';
-import Dng_Func from '../src/dungeons/dng_func';
 import Dng_Icons from '../src/dungeons/dungeon_import';
+import Dng_Func from '../src/dungeons/dng_func';
+import LW_Func from '../src/locations/lw_location_func';
+import DW_Func from '../src/locations/dw_location_func';
 import ALTTPRContext from './ALTTPRContext';
 
 import './App.css';
@@ -41,18 +43,18 @@ class App extends Component {
 
   checkLogic = () => {
     this.checkDungeonLogic();
+    this.checkLocLogic();
   }
 
   checkDungeonLogic = () => {
     const {hasBoots, hasBow, hasHookshot, hasHammer, hasPower_Glove,
            hasTitans_Mitt, hasFlippers, hasMoon_Pearl, hasFire_Rod, hasIce_Rod,
-           hasLantern, hasCane_of_Somaria, hasMagic_Cape, hasMirror, hasFlute, 
-           hasBook, hasFighter_Sword, hasMaster, hasBombos} = this.state;
+           hasLantern, hasCane_of_Somaria, hasMirror, hasFlute, 
+           hasBook, hasFighter_Sword, hasBombos} = this.state;
 
     if (Dng_Func.eastern_palace(hasBow, hasLantern)) {this.forceUpdate()}
     if (Dng_Func.desert_palace(hasBook, hasPower_Glove, hasBoots, hasLantern, hasFire_Rod, hasFlute, hasTitans_Mitt, hasMirror)) {this.forceUpdate();}
     if (Dng_Func.tower_of_hera(hasLantern, hasFire_Rod, hasFighter_Sword, hasHammer, hasMirror, hasPower_Glove, hasHookshot, hasFlute)) {this.forceUpdate();}
-    // if (Dng_Func.agahnim(hasMagic_Cape, hasMaster, hasFighter_Sword, hasLantern)) {}
     if(hasMoon_Pearl) {
       if(hasTitans_Mitt || (hasPower_Glove && hasHammer)) {
         if (Dng_Func.palace_of_darkness(hasLantern, hasHammer, hasBow)) {this.forceUpdate();}
@@ -65,6 +67,23 @@ class App extends Component {
         if (Dng_Func.ganons_tower(hasBoots, hasHammer, hasHookshot, hasCane_of_Somaria, hasFire_Rod, hasBow)) {this.forceUpdate();}
       }
     }
+  }
+
+  checkLocLogic = () => {
+    this.lw_locations();
+    this.dw_locations();
+  }
+
+  lw_locations = () => {
+    const {hasBoots, hasPower_Glove, hasTitans_Mitt, hasFlippers, hasMoon_Pearl, hasFire_Rod,
+           hasLantern, hasMagic_Cape, hasMirror, hasBook, hasFighter_Sword, hasMaster, hasAgahnim} = this.state;
+    // if(LW_Func.master_sword_pedestal(hasBook)) {this.forceUpdate()};
+  }
+
+  dw_locations = () => {
+    const {hasHookshot, hasHammer, hasPower_Glove,
+           hasTitans_Mitt, hasFlippers, hasMoon_Pearl, hasFire_Rod,
+           hasMagic_Cape, hasMirror, hasFlute, hasAgahnim } = this.state;
   }
 
   incrementCrystalCount = () => {
@@ -80,11 +99,12 @@ class App extends Component {
       handleInventory: this.handleInventory,
       incrementCrystalCount: this.incrementCrystalCount
     }
+    console.log(this.state)
     return (
       <ALTTPRContext.Provider value={contextValue}>
         <div className="App">
-          <Inventory />
           <Dungeons />
+          <Inventory />
           <Bosses />
           <Map />
         </div>

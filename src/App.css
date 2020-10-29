@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: black;
+  color: white;
 }
 
 li {
@@ -13,6 +14,53 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+/*Inv Styling*/
+.inv {
+  margin-top: 15px;
+}
+.inv > button > img {
+  max-width: 28px;
+  min-height: 30px;
+  max-height: 30px;
+}
+
+.bow {
+  min-width: 16px;
+  max-width: 16px;
+}
+
+/*Status of Locations / Dungeons*/
+.locked {
+  background-color: red;
+  width: 100%;
+  height: 10px;
+}
+
+.visible {
+  background-color: blue;
+}
+
+.accesible {
+  background-color: orangered;
+}
+
+.beatable {
+  background-color: yellow;
+  width: 100%;
+  height: 10px;
+}
+
+.unlocked {
+  background-color: lime;
+  width: 100%;
+  height: 10px;
+}
+
+/*Dungeon list - tier styling*/
+.hidden {
+  opacity: 0;
 }
 
 .gray {
@@ -29,28 +77,18 @@ button {
   position: relative;
 }
 
-.locked {
-  background-color: red;
+.dng > img {
   width: 100%;
-  height: 10px;
-}
-
-.beatable {
-  background-color: yellow;
-  width: 100%;
-  height: 10px;
-}
-
-.unlocked {
-  background-color: green;
-  width: 100%;
-  height: 10px;
+  height: 100%;
 }
 
 .dng_list {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 
 .dng_list > div {
@@ -74,23 +112,7 @@ button {
   left: 0;
 }
 
-.map_overview {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.map_overview > div {
-  width: 45%;
-  margin: 10px;
-}
-
-.map_overview > div > img {
-  width: 100%;
-  height: 85%;
-}
-
+/*General styling for the bosses icon*/
 .bosses {
   position: absolute;
   left: 0;
@@ -104,3 +126,54 @@ button {
   height: 50px;
   margin-top: 10px;
 }
+
+/*General styling for locations*/
+.map_overview {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.lw, .dw {
+  width: 45%;
+  margin: 10px;
+  position: relative;
+}
+
+.lw > img, .dw > img {
+  width: 100%;
+  height: 85%;
+}
+
+.lw > div, .dw > div {
+  cursor: pointer;
+}
+
+.loc {
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  border: 2px solid black;
+}
+.tooltip {
+  width: fit-content;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+  position: relative;
+}
+
+.tooltip > p {
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+.loc_desc {
+  font-size: 12px;
+  text-align: right;
+}
+
