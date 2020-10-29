@@ -1,0 +1,89 @@
+/*VoO = Village of Outcasts*/
+/*Lost Woods Area*/
+.bumper {
+    top: 7.5em;
+    left: 17.3em;
+}
+
+/*Village of Outcasts*/
+.c_shaped {
+    top: 19.5em;
+    left: 10em;
+}
+
+.treasure_game {
+    top: 19.5em;
+    left: 2em;
+}
+
+.bombable_shack {
+    top: 24.5em;
+    left: 5em;
+}
+
+/*East VoO*/
+.dw_purple_chest {
+    top: 22em;
+    left: 14.8em;
+}
+
+.hammer_pegs {
+    top: 25.3em;
+    left: 15.3em;
+}
+
+.haunted_grove {
+    top: 29em;
+    left: 15em;
+}
+
+/*South VoO*/
+.dw_smith {
+    top: 28em;
+    left: 7em;
+}
+
+.digging_game {
+    top: 29em;
+    left: 1.5em;
+}
+
+/*MM Area*/
+.mm_shack {
+    top: 34em;
+    left: 1.5em;
+}
+
+/*DW South Shore*/
+.hype {
+    top: 33em;
+    right: 23em;
+}
+
+/*Pyramid*/
+.pyramid {
+    top: 19em;
+    right: 24em;
+}
+
+/*Zora Area*/ 
+.catfish {
+    top: 7em;
+    right: 8em;
+}
+
+/*Death Mountain*/
+.super_bunny {
+    top: 6em;
+    right: 10em;
+}
+
+.hookshot_cave {
+    top: 2.4em;
+    right: 11em;
+}
+
+.spike_cave {
+    top: 5.7em;
+    right: 24.2em;
+}

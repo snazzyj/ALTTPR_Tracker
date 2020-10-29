@@ -1,0 +1,236 @@
+/* lw_loc_hidden -- default */
+/* lw_loc_unlocked -- default for most LW loc*/
+/* lw_loc_can_be_checked_has_requirements -- sahasrala, tablets, pedestal */
+/**/
+
+/* Lost Woods */
+.msp {
+    top: 1.3em;
+    left: 1.5em;
+}
+
+.lost_woods {
+    top: 4.5em;
+    left: 7.5em;
+}
+
+.lumberjack {
+    top: 1.5em;
+    left: 16em;
+}
+
+/* Kakariko */
+.well {
+    top: 17em;
+    left: 0.6em;
+}
+
+.blind {
+    top: 17em;
+    left: 6em;
+}
+
+.bottle_vendor {
+    top: 19.5em;
+    left: 4.3em;
+}
+
+.chicken_hut {
+    top: 22.3em;
+    left: 4.3em;
+}
+
+.sick_kid {
+    top: 22.3em;
+    left: 7.2em;
+}
+
+.tavern {
+    top: 24.5em;
+    left: 7.5em;
+}
+
+/*South Kakariko*/
+.library {
+    top: 27.5em;
+    left: 7.2em;
+}
+
+.race_game {
+    top: 29.5em;
+    left: 1.2em;
+}
+
+/*East Kakariko*/
+.smith {
+    top: 22em;
+    left: 14.8em;
+}
+
+.magic_bat {
+    top: 23.5em;
+    left: 16em;
+}
+
+.dig {
+    top: 28em;
+    left: 14em;
+}
+
+.south_grove_lw {
+    top: 35.7em;
+    left: 13.5em;
+}
+
+.link_house {
+    top: 29em;
+    right: 25.4em;
+}
+
+/*Hyrule Castle*/
+.castle_secret {
+    top: 18em;
+    right: 25.2em;
+}
+
+.hyrule_castle {
+    top: 18.2em;
+    left: 24.5em;
+}
+
+.sanc {
+    top: 11em;
+    left: 22.7em;
+}
+
+.agahnim_loc {
+    top: 17em;
+    left: 24.5em;
+}
+
+/* Sanctuary Area */
+.bonk_rocks {
+    top: 12em;
+    left: 19em;
+}
+
+.graveyard {
+    top: 11.5em;
+    right: 24.3em;
+}
+
+.king_tomb {
+    top: 12em;
+    right: 22.6em;
+}
+
+/* South Shore */
+
+.dam {
+    top: 40em;
+    left: 23.2em;
+}
+
+.minimoldorm {
+    top: 40em;
+    right: 20em;
+}
+
+.ice_rod_cave {
+    top: 32.4em;
+    right: 8em;
+}
+
+.lake_hylia {
+    top: 35em;
+    right: 16.6em;
+}
+
+.hobo {
+    top: 29em;
+    right: 18em;
+}
+
+/* Desert Area */
+.purple_chest {
+    top: 38em;
+    left: 16.5em;
+}
+
+.bombos_tablet {
+    top: 39em;
+    left: 11em;
+}
+
+.aginah {
+    top: 35em;
+    left: 9.5em;
+}
+
+.checkerboard {
+    top: 33em;
+    left: 8em;
+}
+
+.desert_ledge {
+    top: 39em;
+    left: 0.6em;
+}
+
+/* Eastern Area */
+.sahasrala {
+    top: 19em;
+    right: 12.1em;
+}
+
+.witches_hut {
+    top: 14em;
+    right: 12em;
+}
+
+/* Zora */
+.waterfall_fairy {
+    top: 5.3em;
+    right: 7.6em;
+}
+
+.zora_area {
+    top: 5.3em;
+    right: 5em;
+}
+
+/* Death Mountain */
+.old_man {
+    top: 7.5em;
+    left: 20em;
+}
+
+.spectale_rock {
+    top: 4em;
+    left: 24em;
+}
+
+.paradox_cave {
+    top: 9em;
+    right: 9.5em;
+}
+
+.mimic_cave {
+    top: 3.6em;
+    right: 10.5em;
+}
+
+.spiral_cave {
+    top: 3.6em;
+    right: 13em;
+}
+
+.floating_island {
+    top: 0.5em;
+    right: 12.5em;
+}
+
+.ether_tablet {
+    top: 0.5em;
+    left: 21em;
+}
