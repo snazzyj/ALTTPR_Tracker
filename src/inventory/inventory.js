@@ -83,7 +83,7 @@ class Inventory extends Component {
             <section className="inv">
                 {Icons.map((icon) => {
                     return <button key={icon.name} onClick={e => handleInventory(icon.name)} >
-                        <img src={icon.src} alt={icon.name} className={icon.found ? 'color' : 'gray'} />
+                        <img src={icon.src} alt={icon.name} className={` ${icon.class} ${icon.found ? 'color' : 'gray'}`} />
                     </button>
                 })}
                 <button key={swordName} onClick={e => this.upgradeSword()} >

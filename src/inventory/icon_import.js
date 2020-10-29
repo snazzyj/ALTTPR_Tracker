@@ -33,7 +33,8 @@ const Icons = [
     {
         name: 'Bow',
         src: Bow,
-        found: false
+        found: false,
+        class: 'bow'
     },
     {
         name: 'Silvers',
