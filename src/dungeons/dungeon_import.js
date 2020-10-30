@@ -14,6 +14,17 @@ import Green_Pendant from '../assests/icons/ALttP_Pendant_of_Courage_Sprite.png'
 import Blue_Pendant from '../assests/icons/ALttP_Pendant_of_Power_Sprite.png';
 import Red_Pendant from '../assests/icons/ALttP_Pendant_of_Wisdom_Sprite.png';
 
+import Armos from '../assests/bosses/ALttP_Armos_Knights_Sprite.png';
+import Arrghus from '../assests/bosses/ALttP_Arrghus_Sprite.png'
+import Blind from '../assests/bosses/ALttP_Blind_the_Thief_Sprite.png'
+import Helmasaur from '../assests/bosses/ALttP_Helmasaur_King_Sprite.png'
+import Kholdstare from '../assests/bosses/ALttP_Kholdstare_Sprite.png'
+import Lanmolas from '../assests/bosses/ALttP_Lanmolas_Sprite.png'
+import Moldorm from '../assests/bosses/ALttP_Moldorm_Sprite.png'
+import Mothula from '../assests/bosses/ALttP_Mothula_Sprite.png'
+import Trinexx from '../assests/bosses/ALttP_Trinexx_Sprite.png'
+import Vitreous from '../assests/bosses/ALttP_Vitreous_Sprite.png'
+
 const dng_icons = [
     {
         name: 'Eastern_Palace',
@@ -39,7 +50,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Armos',
+        boss_icon: Armos,
+        isComplete: false 
     },
     {
         name: 'Desert_Palace',
@@ -65,7 +79,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Lanmolas',
+        boss_icon: Lanmolas,
+        isComplete: false 
     },
     {
         name: 'Tower_of_Hera',
@@ -91,7 +108,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Moldorm',
+        boss_icon: Moldorm,
+        isComplete: false 
     },
     {
         name: 'Palace_of_Darkness',
@@ -117,7 +137,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Helmasaur',
+        boss_icon: Helmasaur,
+        isComplete: false 
     },
     {
         name: 'Swamp_Palace',
@@ -143,7 +166,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Arrghus',
+        boss_icon: Arrghus,
+        isComplete: false 
     },
     {
         name: 'Skull_Woods',
@@ -169,7 +195,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Mothula',
+        boss_icon: Mothula,
+        isComplete: false 
     },
     {
         name: 'Thieves_Town',
@@ -195,7 +224,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Blind',
+        boss_icon: Blind,
+        isComplete: false 
     },
     {
         name: 'Ice_Palace',
@@ -221,7 +253,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss: 'Kholdstare',
+        boss_icon: Kholdstare,
+        isComplete: false 
     },
     {
         name: 'Misery_Mire',
@@ -247,7 +282,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Vitreous',
+        boss_icon: Vitreous,
+        isComplete: false 
     },
     {
         name: 'Turtle_Rock',
@@ -273,7 +311,10 @@ const dng_icons = [
                 name: 'Blue Pendant',
                 src: Blue_Pendant
             },
-        ]
+        ],
+        boss_name: 'Trinexx',
+        boss_icon: Trinexx,
+        isComplete: false 
     },
     // {
     //     name: 'Ganons_Tower',

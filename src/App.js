@@ -77,7 +77,7 @@ class App extends Component {
   lw_locations = () => {
     const {hasBoots, hasPower_Glove, hasTitans_Mitt, hasFlippers, hasMoon_Pearl, hasFire_Rod,
            hasLantern, hasMagic_Cape, hasMirror, hasBook, hasFighter_Sword, hasMaster, hasAgahnim} = this.state;
-    // if(LW_Func.master_sword_pedestal(hasBook)) {this.forceUpdate()};
+    if(LW_Func.unlockBookLoc(hasBook)) {this.forceUpdate()};
   }
 
   dw_locations = () => {
@@ -105,7 +105,7 @@ class App extends Component {
         <div className="App">
           <Dungeons />
           <Inventory />
-          <Bosses />
+          {/* <Bosses /> */}
           <Map />
         </div>
       </ALTTPRContext.Provider>
