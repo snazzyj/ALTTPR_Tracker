@@ -1,20 +1,29 @@
 import LW_Loc from './lw_loc_import';
 
 const lw_loc_func = {
-    master_sword_pedestal() {
-
+    master_sword_pedestal(book) {
+        this.desert_ledge(book);
+        if(book) {
+            return this.unlocked('Master Sword Pedestal')
+        }
     },
-    lumberjack() {
-
+    lumberjack(agahnim) {
+        if(agahnim) {
+            return this.unlocked('Lumberjack')
+        }
     },
-    library() {
-
+    library(boots) {
+        if(boots) {
+            return this.unlocked('Library')
+        }
     },
     lw_dwarven_smith() {
 
     },
-    magic_bat() {
-
+    magic_bat(hammer, powder) {
+        if(hammer && powder) {
+            return this.unlocked('Magic Bat')
+        }
     },
     dig_spot() {
 
@@ -46,8 +55,10 @@ const lw_loc_func = {
     checkerboard_cave() {
 
     },
-    desert_ledge() {
-
+    desert_ledge(book) {
+        if(book) {
+            return this.unlocked('Desert Ledge')
+        }
     },
     witches_hut() {
 
@@ -82,8 +93,12 @@ const lw_loc_func = {
     beatable() {
         
     },
-    unlocked() {
-
+    unlocked(name) {
+        return LW_Loc.find((loc) => {
+            if (loc.name === name) {
+                return loc.status = 'unlocked' 
+            }
+        })
     }
 }
 

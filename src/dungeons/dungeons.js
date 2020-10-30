@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Dng_Icons from './dungeon_import';
 import Medallions from './medallion';
-import Bosses from '../bosses/bosses';
 import ALTTPRContext from '../ALTTPRContext';
 
 class Dungeons extends Component {

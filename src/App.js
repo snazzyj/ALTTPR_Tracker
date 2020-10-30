@@ -3,7 +3,6 @@ import Inventory from '../src/inventory/inventory';
 import Dungeons from '../src/dungeons/dungeons';
 import Map from '../src/map_overview/map';
 import Icons from '../src/inventory/icon_import';
-import Bosses from '../src/bosses/bosses';
 import Dng_Icons from '../src/dungeons/dungeon_import';
 import Dng_Func from '../src/dungeons/dng_func';
 import LW_Func from '../src/locations/lw_location_func';
@@ -77,7 +76,8 @@ class App extends Component {
   lw_locations = () => {
     const {hasBoots, hasPower_Glove, hasTitans_Mitt, hasFlippers, hasMoon_Pearl, hasFire_Rod,
            hasLantern, hasMagic_Cape, hasMirror, hasBook, hasFighter_Sword, hasMaster, hasAgahnim} = this.state;
-    if(LW_Func.unlockBookLoc(hasBook)) {this.forceUpdate()};
+    if(LW_Func.master_sword_pedestal(hasBook)) {this.forceUpdate()};
+    if(LW_Func.lumberjack(hasAgahnim)) {this.forceUpdate()};
   }
 
   dw_locations = () => {
@@ -105,7 +105,6 @@ class App extends Component {
         <div className="App">
           <Dungeons />
           <Inventory />
-          {/* <Bosses /> */}
           <Map />
         </div>
       </ALTTPRContext.Provider>

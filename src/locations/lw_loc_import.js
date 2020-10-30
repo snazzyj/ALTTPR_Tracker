@@ -202,7 +202,7 @@ const lw_loc = [
         name: 'Lake Hylia Island',
         class: 'loc lake_hylia',
         description: 'Island',
-        status: 'locked'
+        status: 'visible'
     },
     {
         name: 'Hobo',
@@ -215,7 +215,7 @@ const lw_loc = [
         class: 'loc sahasrala',
         description: 'Backroom\n Pendant',
         requirements: 'Green Pendant',
-        status: 'locked'
+        status: 'accesible'
     },
     {
         name: 'Witches Hut',
@@ -234,7 +234,7 @@ const lw_loc = [
         name: 'Zora Area',
         class: 'loc zora_area',
         description: "Zora\n Zora's Ledge",
-        status: 'locked'
+        status: 'accesible'
     },
     {
         name: 'South of Grove',
