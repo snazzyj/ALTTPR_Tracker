@@ -195,8 +195,8 @@ const lw_loc = [
         name: 'Desert Ledge',
         class: 'loc desert_ledge',
         description: 'Ledge',
-        requirements: 'Accesible from Desert Palace',
-        status: 'locked'
+        requirements: 'Accessible from Desert Palace',
+        status: 'visible'
     },
     {
         name: 'Lake Hylia Island',
@@ -208,14 +208,14 @@ const lw_loc = [
         name: 'Hobo',
         class: 'loc hobo',
         description: 'Under the bridge',
-        status: 'accesible'
+        status: 'accessible'
     },
     {
         name: "Sahasrala's Hut",
         class: 'loc sahasrala',
         description: 'Backroom\n Pendant',
         requirements: 'Green Pendant',
-        status: 'accesible'
+        status: 'accessible'
     },
     {
         name: 'Witches Hut',
@@ -234,7 +234,7 @@ const lw_loc = [
         name: 'Zora Area',
         class: 'loc zora_area',
         description: "Zora\n Zora's Ledge",
-        status: 'accesible'
+        status: 'accessible'
     },
     {
         name: 'South of Grove',
