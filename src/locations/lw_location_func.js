@@ -2,7 +2,6 @@ import LW_Loc from './lw_loc_import';
 
 const lw_loc_func = {
     master_sword_pedestal(book) {
-        this.desert_ledge(book);
         if(book) {
             return this.unlocked('Master Sword Pedestal')
         }
@@ -17,8 +16,10 @@ const lw_loc_func = {
             return this.unlocked('Library')
         }
     },
-    lw_dwarven_smith() {
-
+    lw_dwarven_smith(titans_mitt) {
+        if(titans_mitt) {
+            return this.unlocked('LW Dwarven Smith')
+        }
     },
     magic_bat(hammer, powder) {
         if(hammer && powder) {
@@ -30,24 +31,30 @@ const lw_loc_func = {
             return this.unlocked('Dig Spot')
         }
     },
-    hyrule_castle() {
-
+    hyrule_castle(power_glove, lantern) {
+        if(power_glove && lantern) {
+            return this.unlocked('Hyrule Castle')
+        }
     },
     bonk_rocks(boots) {
         if(boots) {
             return this.unlocked('Bonk Rocks')
         }
     },
-    graveyard_ledge() {
-        return this.unlocked('Graveyard Ledge')
+    graveyard_ledge(mirror) {
+        if(mirror) {
+            return this.unlocked('Graveyard Ledge')
+        }
     },
     kings_tomb(power_glove, titans_mitt, moon_pearl, mirror) {
         if(titans_mitt || (power_glove && moon_pearl && mirror)) {
             return this.unlocked('Kings Tomb')
         }
     },
-    lake_hylia() {
-
+    lake_hylia(mirror) {
+        if(mirror) {
+            return this.unlocked('Lake Hylia')
+        }
     },
     hobo(flippers) {
         if(flippers) {
@@ -57,8 +64,16 @@ const lw_loc_func = {
     purple_chest() {
         return this.unlocked('Purple Chest')
     },
-    bombos_tablet() {
-
+    bombos_tablet(mirror, book, master) {
+        if(mirror) {
+            if(book) {
+                if(master) {
+                    return this.unlocked('Bombos Tablet')
+                } else {
+                    return this.visible('Bombos Tablet')
+                }
+            }
+        }
     },
     checkerboard_cave(flute, titans_mitt, mirror) {
         if(flute && titans_mitt && mirror) {
@@ -109,8 +124,10 @@ const lw_loc_func = {
             return this.unlocked('Spiral Cave')
         }
     },
-    mimic_cave() {
-        
+    mimic_cave(mirror) {
+        if(mirror) {
+            return this.unlocked('Mimic Cave')
+        }
     },
     floating_island(hookshot, mirror, power_glove) {
         if(power_glove) {
@@ -128,6 +145,15 @@ const lw_loc_func = {
                 return this.unlocked('Ether Tablet')
             } else {
                 return this.visible('Ether Tablet')
+            }
+        }
+    },
+    agahnim(master, magic_cape, lantern, fighter) {
+        if(master || (magic_cape && fighter)) {
+            if(lantern) {
+                return this.unlocked('Agahnim')
+            } else {
+                return this.beatable('Agahnim')
             }
         }
     },
@@ -149,6 +175,13 @@ const lw_loc_func = {
         return LW_Loc.find((loc) => {
             if (loc.name === name) {
                 return loc.status = 'unlocked' 
+            }
+        })
+    },
+    beatable(name) {
+        return LW_Loc.find((loc) => {
+            if (loc.name === name) {
+                return loc.status = 'beatable' 
             }
         })
     }

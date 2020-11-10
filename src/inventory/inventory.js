@@ -18,30 +18,30 @@ class Inventory extends Component {
 
     upgradeSword = () => {
         const { handleInventory } = this.context;
-        const {sword_idx, upgradable_items} = this.state;
-        if(!upgradable_items.sword[0].found) {
-            upgradable_items.sword[0].found = true;
-        }
-        if(upgradable_items.sword[0].found) {
-            if(sword_idx + 1 === upgradable_items.sword.length) {
-                this.setState({
-                    sword_idx: 0,
-                })
-            } else {
-                this.setState({
-                    sword_idx: sword_idx + 1
-                })
-                if(upgradable_items.sword[sword_idx].name === 'Fighter_Sword' || upgradable_items.sword[sword_idx].name === 'Master') {
-                    handleInventory(upgradable_items.sword[sword_idx].name);
-                }
-            }
-        }
+        const { sword_idx, upgradable_items } = this.state;
+        if (sword_idx + 1 === upgradable_items.sword.length) {
+            this.setState({
+                sword_idx: 0,
+            })
+        } else {
+            this.setState({
+                sword_idx: sword_idx + 1
+            }, () => { this.checkSwordName() })
 
+        }
     }
-    
+
+    checkSwordName = () => {
+        const { handleInventory } = this.context;
+        const { sword_idx, upgradable_items } = this.state;
+        if (upgradable_items.sword[sword_idx].name === 'Fighter_Sword' || upgradable_items.sword[sword_idx].name === 'Master') {
+            handleInventory(upgradable_items.sword[sword_idx].name);
+        }
+    }
+
     upgradeShield = () => {
-        const {shield_idx, upgradable_items} = this.state;
-        if(shield_idx + 1 === upgradable_items.shield.length) {
+        const { shield_idx, upgradable_items } = this.state;
+        if (shield_idx + 1 === upgradable_items.shield.length) {
             this.setState({
                 shield_idx: 0
             })
@@ -54,8 +54,8 @@ class Inventory extends Component {
     }
 
     upgradeArmor = () => {
-        const {armor_idx, upgradable_items} = this.state;
-        if(armor_idx + 1 === upgradable_items.armor.length) {
+        const { armor_idx, upgradable_items } = this.state;
+        if (armor_idx + 1 === upgradable_items.armor.length) {
             this.setState({
                 armor_idx: 0
             })
@@ -68,7 +68,6 @@ class Inventory extends Component {
     }
 
     render() {
-        // console.log(this.state);
         const { handleInventory } = this.context;
         const { upgradable_items, armor_idx, sword_idx, shield_idx } = this.state;
         let swordName = upgradable_items.sword[sword_idx].name;

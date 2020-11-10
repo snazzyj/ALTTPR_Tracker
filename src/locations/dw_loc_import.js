@@ -3,7 +3,7 @@ const dw_loc = [
         name: 'Bumper Cave',
         class: 'loc bumper',
         description: 'Cave',
-        status: 'locked'
+        status: 'visible'
     },
     {
         name: 'C Shaped House',
@@ -42,7 +42,7 @@ const dw_loc = [
         status: 'locked'
     },
     {
-        name: 'Dwarven Smith',
+        name: 'DW Dwarven Smith',
         class: 'loc dw_smith',
         description: 'Bring him home',
         status: 'locked'

@@ -54,6 +54,7 @@ class App extends Component {
     if (Dng_Func.eastern_palace(hasBow, hasLantern)) { this.forceUpdate() }
     if (Dng_Func.desert_palace(hasBook, hasPower_Glove, hasBoots, hasLantern, hasFire_Rod, hasFlute, hasTitans_Mitt, hasMirror)) { this.forceUpdate(); }
     if (Dng_Func.tower_of_hera(hasLantern, hasFire_Rod, hasFighter_Sword, hasHammer, hasMirror, hasPower_Glove, hasHookshot, hasFlute)) { this.forceUpdate(); }
+    
     if (hasMoon_Pearl) {
       if (hasTitans_Mitt || (hasPower_Glove && hasHammer)) {
         if (Dng_Func.palace_of_darkness(hasLantern, hasHammer, hasBow)) { this.forceUpdate(); }
@@ -78,67 +79,71 @@ class App extends Component {
        hasFire_Rod, hasMagic_Powder, hasLantern, hasMagic_Cape, hasMirror, hasBook, 
        hasFighter_Sword, hasMaster, hasAgahnim, hasShovel, hasMushroom, hasHookshot, 
        hasFlute, Dng_Icons } = this.state;
+
     if (LW_Func.master_sword_pedestal(hasBook)) { this.forceUpdate() };
     if (LW_Func.lumberjack(hasAgahnim)) { this.forceUpdate() };
     if (LW_Func.library(hasBoots)) { this.forceUpdate() };
     if (LW_Func.magic_bat(hasHammer, hasMagic_Powder)) { this.forceUpdate() };
     if (LW_Func.dig_spot(hasShovel)) { this.forceUpdate() };
     if (LW_Func.bonk_rocks(hasBoots)) { this.forceUpdate() };
-    
-    if (LW_Func.hobo(hasFlippers)) { this.forceUpdate() };
-    // waterfall fairy
-    if (LW_Func.waterfall_fairy(hasFlippers)) { this.forceUpdate() };
-    // zora
-    if (LW_Func.zora(hasFlippers)) { this.forceUpdate() };
-    // witches hut
-    if (LW_Func.witches_hut(hasMushroom)) { this.forceUpdate() };
-    // old man
-    if (LW_Func.old_man(hasPower_Glove, hasLantern)) { this.forceUpdate() };
-    // spectale rock
-    if (LW_Func.spectale_rock(hasMirror)) { this.forceUpdate() };
-    // paradox cave
-    if (LW_Func.paradox_cave(hasHammer, hasHookshot, hasMirror)) { this.forceUpdate() };
-    // spiral cave
-    if (LW_Func.spiral_cave(hasHammer, hasHookshot, hasMirror)) { this.forceUpdate() };
-    // ether tablet
-    if (LW_Func.ether_tablet(hasMirror, hasBook, hasHammer, hasHookshot)) { this.forceUpdate() };
-    // desert ledge
     if (LW_Func.desert_ledge(hasBook)) { this.forceUpdate() };
-
+    if (LW_Func.hobo(hasFlippers)) { this.forceUpdate() };
+    if (LW_Func.waterfall_fairy(hasFlippers)) { this.forceUpdate() };
+    if (LW_Func.zora(hasFlippers)) { this.forceUpdate() };
+    if (LW_Func.witches_hut(hasMushroom)) { this.forceUpdate() };
+    if (LW_Func.old_man(hasPower_Glove, hasLantern)) { this.forceUpdate() };
+    if (LW_Func.spectale_rock(hasMirror)) { this.forceUpdate() };
+    if (LW_Func.paradox_cave(hasHammer, hasHookshot, hasMirror)) { this.forceUpdate() };
+    if (LW_Func.spiral_cave(hasHammer, hasHookshot, hasMirror)) { this.forceUpdate() };
+    if (LW_Func.ether_tablet(hasMirror, hasBook, hasHammer, hasHookshot)) { this.forceUpdate() };
+    if (LW_Func.desert_ledge(hasBook)) { this.forceUpdate() };
+    if (LW_Func.floating_island(hasHookshot, hasMirror, hasPower_Glove)) { this.forceUpdate() };
+    if (LW_Func.checkerboard_cave(hasFlute, hasTitans_Mitt, hasMirror)) { this.forceUpdate() };
+    
+    // if(LW_Func.kings_tomb(hasMoon_Pearl, hasMirror, hasTitans_Mitt)) {this.forceUpdate()};
+    if (LW_Func.agahnim(hasMaster, hasMagic_Cape, hasLantern, hasFighter_Sword)) { this.forceUpdate() };
+    if (LW_Func.hyrule_castle(hasPower_Glove, hasLantern)) { this.forceUpdate() };
 
     if (hasMoon_Pearl) {
       if (hasTitans_Mitt || (hasPower_Glove && hasHammer)) {
-        // graveyard ledge
-        if (LW_Func.graveyard_ledge()) { this.forceUpdate() };
-
-        // kings tomb
-        // if(LW_Func.kings_tomb()) {this.forceUpdate()};
-
-        // purple chest
+        if (LW_Func.graveyard_ledge(hasMirror)) { this.forceUpdate() };
         if (LW_Func.purple_chest()) { this.forceUpdate() };
-
-        // dwarven smith
-        if(LW_Func.lw_dwarven_smith(hasMirror)) { this.forceUpdate() };
+        if (LW_Func.lw_dwarven_smith(hasTitans_Mitt)) { this.forceUpdate() };
+        if (LW_Func.lake_hylia(hasMirror)) { this.forceUpdate() };
+        if (LW_Func.bombos_tablet(hasMirror, hasBook, hasMaster)) { this.forceUpdate() };
       }
     }
-
-    // floating island
-    if (LW_Func.floating_island(hasHookshot, hasMirror, hasPower_Glove)) { this.forceUpdate() };
-    
-    // checkboard cave
-    if (LW_Func.checkerboard_cave(hasFlute, hasTitans_Mitt, hasMirror)) { this.forceUpdate() };
 
     if(Dng_Icons[9].status === 'beatable') {
       // mimic cave
       // requires access to TR
-      if(LW_Func.mimic_cave()) { this.forceUpdate() };
+      if(LW_Func.mimic_cave(hasMirror)) { this.forceUpdate() };
     }
   }
 
   dw_locations = () => {
-    const { hasHookshot, hasHammer, hasPower_Glove,
-      hasTitans_Mitt, hasFlippers, hasMoon_Pearl, hasFire_Rod,
-      hasMagic_Cape, hasMirror, hasFlute, hasAgahnim } = this.state;
+    const { hasHookshot, hasHammer, hasPower_Glove, hasTitans_Mitt, 
+      hasMoon_Pearl, hasFlute, hasAgahnim, hasMagic_Cape, hasCane_of_Bryna } = this.state;
+
+      if (hasMoon_Pearl) {
+        if (hasTitans_Mitt || (hasPower_Glove && hasHammer)) {
+          if (DW_Func.bumper_cave(hasMagic_Cape)) { this.forceUpdate() };
+          if (DW_Func.treasure_game()) { this.forceUpdate() };
+          if (DW_Func.c_shaped()) { this.forceUpdate() };
+          if (DW_Func.bombable_shack()) { this.forceUpdate() };
+          if (DW_Func.haunted_grove()) { this.forceUpdate() };
+          if (DW_Func.dw_dwarven_smith(hasTitans_Mitt)) { this.forceUpdate() };
+          if (DW_Func.hammer_pegs(hasHammer)) { this.forceUpdate() };
+          if (DW_Func.digging_game(hasHammer)) { this.forceUpdate() };
+          if (DW_Func.mire_shack(hasFlute, hasTitans_Mitt)) { this.forceUpdate() };
+          if (DW_Func.hype_cave()) { this.forceUpdate() };
+          if (DW_Func.pyramid_ledge(hasHammer, hasAgahnim)) { this.forceUpdate() };
+          if (DW_Func.spike_cave(hasPower_Glove, hasMagic_Cape, hasCane_of_Bryna)) { this.forceUpdate() };
+          if (DW_Func.super_bunny(hasHookshot)) { this.forceUpdate() };
+          if (DW_Func.hookshot_cave(hasHookshot)) { this.forceUpdate() };
+          if (DW_Func.catfish(hasHammer)) { this.forceUpdate() };
+        }
+      }
   }
 
   incrementCrystalCount = () => {
@@ -154,7 +159,6 @@ class App extends Component {
       handleInventory: this.handleInventory,
       incrementCrystalCount: this.incrementCrystalCount
     }
-    console.log(this.state)
     return (
       <ALTTPRContext.Provider value={contextValue}>
         <div className="App">

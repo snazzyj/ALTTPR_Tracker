@@ -74,7 +74,7 @@ const lw_loc = [
         status: 'unlocked'
     },
     {
-        name: 'Dwarven Smith',
+        name: 'LW Dwarven Smith',
         class: 'loc smith',
         description: '2 Guys hammering away',
         requirements: 'Bring home the other smith',

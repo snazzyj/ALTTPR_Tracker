@@ -51,7 +51,7 @@ const upgradable_items = {
     ],
     sword: [
         {
-            name: 'Fighter_Sword',
+            name: '',
             src: Fighter_Sword,
             found: false
         },
