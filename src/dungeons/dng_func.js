@@ -15,7 +15,7 @@ const dng_func = {
             if (lantern || fire_rod) {
                 if(boots) {
                     return this.unlocked('DP');
-                } else {
+                } else if(power_glove) {
                     return this.beatable('DP')
                 }
             } else {

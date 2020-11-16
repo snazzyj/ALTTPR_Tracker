@@ -160,7 +160,6 @@ class App extends Component {
       handleInventory: this.handleInventory,
       incrementCrystalCount: this.incrementCrystalCount
     }
-    console.log(this.state)
     return (
       <ALTTPRContext.Provider value={contextValue}>
         <div className="App">

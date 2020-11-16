@@ -17,7 +17,6 @@ class Inventory extends Component {
     }
 
     upgradeSword = () => {
-        const { handleInventory } = this.context;
         const { sword_idx, upgradable_items } = this.state;
         if (sword_idx + 1 === upgradable_items.sword.length) {
             this.setState({
