@@ -76,12 +76,13 @@ class App extends Component {
 
   lw_locations = () => {
     const { hasBoots, hasHammer, hasPower_Glove, hasTitans_Mitt, hasFlippers, hasMoon_Pearl,
-       hasFire_Rod, hasMagic_Powder, hasLantern, hasMagic_Cape, hasMirror, hasBook, 
+       hasMagic_Powder, hasLantern, hasMagic_Cape, hasMirror, hasBook, 
        hasFighter_Sword, hasMaster, hasAgahnim, hasShovel, hasMushroom, hasHookshot, 
-       hasFlute, Dng_Icons } = this.state;
+       hasFlute, hasBottle, Dng_Icons } = this.state;
 
     if (LW_Func.master_sword_pedestal(hasBook)) { this.forceUpdate() };
     if (LW_Func.lumberjack(hasAgahnim)) { this.forceUpdate() };
+    if (LW_Func.sick_kid(hasBottle)) { this.forceUpdate() };
     if (LW_Func.library(hasBoots)) { this.forceUpdate() };
     if (LW_Func.magic_bat(hasHammer, hasMagic_Powder)) { this.forceUpdate() };
     if (LW_Func.dig_spot(hasShovel)) { this.forceUpdate() };
@@ -100,14 +101,14 @@ class App extends Component {
     if (LW_Func.floating_island(hasHookshot, hasMirror, hasPower_Glove)) { this.forceUpdate() };
     if (LW_Func.checkerboard_cave(hasFlute, hasTitans_Mitt, hasMirror)) { this.forceUpdate() };
     
-    // if(LW_Func.kings_tomb(hasMoon_Pearl, hasMirror, hasTitans_Mitt)) {this.forceUpdate()};
+    if(LW_Func.kings_tomb(hasMoon_Pearl, hasMirror, hasTitans_Mitt, hasBoots)) {this.forceUpdate()};
     if (LW_Func.agahnim(hasMaster, hasMagic_Cape, hasLantern, hasFighter_Sword)) { this.forceUpdate() };
     if (LW_Func.hyrule_castle(hasPower_Glove, hasLantern)) { this.forceUpdate() };
 
     if (hasMoon_Pearl) {
       if (hasTitans_Mitt || (hasPower_Glove && hasHammer)) {
         if (LW_Func.graveyard_ledge(hasMirror)) { this.forceUpdate() };
-        if (LW_Func.purple_chest()) { this.forceUpdate() };
+        if (LW_Func.purple_chest(hasTitans_Mitt)) { this.forceUpdate() };
         if (LW_Func.lw_dwarven_smith(hasTitans_Mitt)) { this.forceUpdate() };
         if (LW_Func.lake_hylia(hasMirror)) { this.forceUpdate() };
         if (LW_Func.bombos_tablet(hasMirror, hasBook, hasMaster)) { this.forceUpdate() };
@@ -115,8 +116,6 @@ class App extends Component {
     }
 
     if(Dng_Icons[9].status === 'beatable') {
-      // mimic cave
-      // requires access to TR
       if(LW_Func.mimic_cave(hasMirror)) { this.forceUpdate() };
     }
   }
@@ -124,6 +123,8 @@ class App extends Component {
   dw_locations = () => {
     const { hasHookshot, hasHammer, hasPower_Glove, hasTitans_Mitt, 
       hasMoon_Pearl, hasFlute, hasAgahnim, hasMagic_Cape, hasCane_of_Bryna } = this.state;
+
+      if (DW_Func.pyramid_ledge(hasHammer, hasPower_Glove, hasMoon_Pearl, hasAgahnim)) { this.forceUpdate() };
 
       if (hasMoon_Pearl) {
         if (hasTitans_Mitt || (hasPower_Glove && hasHammer)) {
@@ -134,14 +135,14 @@ class App extends Component {
           if (DW_Func.haunted_grove()) { this.forceUpdate() };
           if (DW_Func.dw_dwarven_smith(hasTitans_Mitt)) { this.forceUpdate() };
           if (DW_Func.hammer_pegs(hasHammer)) { this.forceUpdate() };
-          if (DW_Func.digging_game(hasHammer)) { this.forceUpdate() };
+          if (DW_Func.purple_chest(hasTitans_Mitt)) { this.forceUpdate() };
+          if (DW_Func.digging_game()) { this.forceUpdate() };
           if (DW_Func.mire_shack(hasFlute, hasTitans_Mitt)) { this.forceUpdate() };
           if (DW_Func.hype_cave()) { this.forceUpdate() };
-          if (DW_Func.pyramid_ledge(hasHammer, hasAgahnim)) { this.forceUpdate() };
           if (DW_Func.spike_cave(hasPower_Glove, hasMagic_Cape, hasCane_of_Bryna)) { this.forceUpdate() };
           if (DW_Func.super_bunny(hasHookshot)) { this.forceUpdate() };
           if (DW_Func.hookshot_cave(hasHookshot)) { this.forceUpdate() };
-          if (DW_Func.catfish(hasHammer)) { this.forceUpdate() };
+          if (DW_Func.catfish(hasTitans_Mitt)) { this.forceUpdate() };
         }
       }
   }
@@ -159,6 +160,7 @@ class App extends Component {
       handleInventory: this.handleInventory,
       incrementCrystalCount: this.incrementCrystalCount
     }
+    console.log(this.state)
     return (
       <ALTTPRContext.Provider value={contextValue}>
         <div className="App">

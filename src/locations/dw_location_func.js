@@ -25,6 +25,11 @@ const dw_loc_func = {
             return this.unlocked('Hammer Pegs')
         }
     },
+    purple_chest(titans_mitts) {
+        if(titans_mitts) {
+            return this.unlocked('DW Purple Chest')
+        }
+    },
     haunted_grove() {
         return this.unlocked('Haunted Grove');
     },
@@ -39,8 +44,8 @@ const dw_loc_func = {
     hype_cave() {
         return this.unlocked('Hype Cave');
     },
-    pyramid_ledge(hammer, agahnim) {
-        if(hammer || agahnim) {
+    pyramid_ledge(hammer, power_glove, moon_pearl, agahnim) {
+        if((hammer && power_glove && moon_pearl) || agahnim) {
             return this.unlocked('Pyramid Ledge');
         }
     },
@@ -61,12 +66,13 @@ const dw_loc_func = {
             return this.unlocked('Hookshot Cave');
         }
     },
-    catfish(hammer) {
-        if(hammer) {
+    catfish(titans_mitts) {
+        if(titans_mitts) {
             return this.unlocked('Catfish');
         }
     },
     unlocked(name) {
+        // eslint-disable-next-line array-callback-return
         return DW_Loc.find((loc) => {
             if (loc.name === name) {
                 return loc.status = 'unlocked' 

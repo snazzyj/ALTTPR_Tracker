@@ -11,12 +11,16 @@ const dng_func = {
         }
     },
     desert_palace(book, power_glove, boots, lantern, fire_rod, flute, titans_mitt, mirror) {
-        if ((book && power_glove && boots) || (flute && titans_mitt && mirror && boots)) {
+        if ((book) || (flute && titans_mitt && mirror)) {
             if (lantern || fire_rod) {
-                return this.unlocked('DP');
+                if(boots) {
+                    return this.unlocked('DP');
+                } else {
+                    return this.beatable('DP')
+                }
             } else {
-                return this.beatable('DP');
-            }
+                return this.accessible('DP')
+            } 
         }
     },
     tower_of_hera(lantern, fire_rod, fighter_sword, hammer, mirror, power_glove, hookshot, flute) {
@@ -87,13 +91,14 @@ const dng_func = {
             this.beatable('GT')
         }
     },
-    // agahnim(magic_cape, master_sword, fighter_sword, lantern) {
-    //     if (master_sword || (magic_cape && fighter_sword)) {
-    //         if (lantern) {
-    //             return
-    //         }
-    //     }
-    // },
+    accessible(name) {
+        // eslint-disable-next-line array-callback-return
+        return Dng_Icons.find((dng) => {
+            if (dng.nickname === name) {
+                return dng.status = 'accessible'
+            }
+        })
+    },
     beatable(name) {
         // eslint-disable-next-line array-callback-return
         return Dng_Icons.find((dng) => {

@@ -11,6 +11,11 @@ const lw_loc_func = {
             return this.unlocked('Lumberjack')
         }
     },
+    sick_kid(bottle) {
+        if(bottle) {
+            return this.unlocked('Sick Kid')
+        }
+    },
     library(boots) {
         if(boots) {
             return this.unlocked('Library')
@@ -46,9 +51,11 @@ const lw_loc_func = {
             return this.unlocked('Graveyard Ledge')
         }
     },
-    kings_tomb(power_glove, titans_mitt, moon_pearl, mirror) {
+    kings_tomb(power_glove, titans_mitt, moon_pearl, mirror, boots) {
         if(titans_mitt || (power_glove && moon_pearl && mirror)) {
-            return this.unlocked('Kings Tomb')
+            if(boots) {
+                return this.unlocked('Kings Tomb')
+            }
         }
     },
     lake_hylia(mirror) {
@@ -61,8 +68,10 @@ const lw_loc_func = {
             return this.unlocked('Hobo')
         }
     },
-    purple_chest() {
-        return this.unlocked('Purple Chest')
+    purple_chest(titans_mitt) {
+        if(titans_mitt) {
+            return this.unlocked('LW Purple Chest')
+        }
     },
     bombos_tablet(mirror, book, master) {
         if(mirror) {
@@ -165,6 +174,7 @@ const lw_loc_func = {
         })
     },
     visible(name) {
+        // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
             if (loc.name === name) {
                 return loc.status = 'visible' 
@@ -172,6 +182,7 @@ const lw_loc_func = {
         })
     },
     unlocked(name) {
+        // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
             if (loc.name === name) {
                 return loc.status = 'unlocked' 
@@ -179,6 +190,7 @@ const lw_loc_func = {
         })
     },
     beatable(name) {
+        // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
             if (loc.name === name) {
                 return loc.status = 'beatable' 

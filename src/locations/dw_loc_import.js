@@ -24,7 +24,7 @@ const dw_loc = [
         status: 'locked'
     },
     {
-        name: 'Purple Chest',
+        name: 'DW Purple Chest',
         class: 'loc dw_purple_chest',
         description: 'Give it to Gary',
         status: 'locked'

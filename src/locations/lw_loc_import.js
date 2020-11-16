@@ -52,7 +52,7 @@ const lw_loc = [
         class: 'loc sick_kid',
         description: 'Lazy kid in bed',
         requirements: 'Bottle',
-        status: 'unlocked'
+        status: 'locked'
     },
     {
         name: 'Tavern',
@@ -166,7 +166,7 @@ const lw_loc = [
         status: 'unlocked'
     },
     {
-        name: 'Purple Chest',
+        name: 'LW Purple Chest',
         class: 'loc purple_chest',
         description: 'Give it to him',
         status: 'locked'
