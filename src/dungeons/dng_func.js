@@ -12,15 +12,13 @@ const dng_func = {
     },
     desert_palace(book, power_glove, boots, lantern, fire_rod, flute, titans_mitt, mirror) {
         if ((book) || (flute && titans_mitt && mirror)) {
-            if (lantern || fire_rod) {
+            if (power_glove && (lantern || fire_rod)) {
                 if(boots) {
                     return this.unlocked('DP');
-                } else if(power_glove) {
-                    return this.beatable('DP')
+                } else {
+                    return this.beatable('DP');
                 }
-            } else {
-                return this.accessible('DP')
-            } 
+            }
         }
     },
     tower_of_hera(lantern, fire_rod, fighter_sword, hammer, mirror, power_glove, hookshot, flute) {

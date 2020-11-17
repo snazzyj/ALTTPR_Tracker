@@ -84,6 +84,11 @@ const lw_loc_func = {
             }
         }
     },
+    south_grove_cave(mirror) {
+        if(mirror) {
+            return this.unlocked('South of Grove')
+        }
+    },
     checkerboard_cave(flute, titans_mitt, mirror) {
         if(flute && titans_mitt && mirror) {
             return this.unlocked('Checkerboard Cave')

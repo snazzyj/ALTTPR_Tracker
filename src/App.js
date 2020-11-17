@@ -101,7 +101,7 @@ class App extends Component {
     if (LW_Func.floating_island(hasHookshot, hasMirror, hasPower_Glove)) { this.forceUpdate() };
     if (LW_Func.checkerboard_cave(hasFlute, hasTitans_Mitt, hasMirror)) { this.forceUpdate() };
     
-    if(LW_Func.kings_tomb(hasMoon_Pearl, hasMirror, hasTitans_Mitt, hasBoots)) {this.forceUpdate()};
+    if (LW_Func.kings_tomb(hasPower_Glove, hasTitans_Mitt, hasMoon_Pearl, hasMirror, hasBoots)) {this.forceUpdate()};
     if (LW_Func.agahnim(hasMaster, hasMagic_Cape, hasLantern, hasFighter_Sword)) { this.forceUpdate() };
     if (LW_Func.hyrule_castle(hasPower_Glove, hasLantern)) { this.forceUpdate() };
 
@@ -112,11 +112,12 @@ class App extends Component {
         if (LW_Func.lw_dwarven_smith(hasTitans_Mitt)) { this.forceUpdate() };
         if (LW_Func.lake_hylia(hasMirror)) { this.forceUpdate() };
         if (LW_Func.bombos_tablet(hasMirror, hasBook, hasMaster)) { this.forceUpdate() };
+        if (LW_Func.south_grove_cave(hasMirror)) { this.forceUpdate() };
       }
     }
 
-    if(Dng_Icons[9].status === 'beatable') {
-      if(LW_Func.mimic_cave(hasMirror)) { this.forceUpdate() };
+    if (Dng_Icons[9].status === 'beatable' || Dng_Icons[9].status === 'unlocked') {
+      if (LW_Func.mimic_cave(hasMirror)) { this.forceUpdate() };
     }
   }
 
@@ -155,6 +156,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     const contextValue = {
       inventory: this.state,
       handleInventory: this.handleInventory,
