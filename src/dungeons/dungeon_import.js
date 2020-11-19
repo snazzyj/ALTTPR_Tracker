@@ -71,7 +71,7 @@ const dng_icons = [
         nickname: 'EP',
         src: Eastern_Palace,
         default_class: 'dng',
-        status: 'locked',
+        status: 'accessible',
         index: 0,
         reward: [
             {

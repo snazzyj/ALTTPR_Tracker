@@ -1,14 +1,11 @@
 import Dng_Icons from './dungeon_import';
 
 const dng_func = {
-    eastern_palace(bow, lantern) {
-        if (bow) {
-            if (lantern) {
+    eastern_palace(bow) {
+            if (bow) {
                 return this.unlocked('EP');
-            } else {
-                return this.beatable('EP');
             }
-        }
+            return null
     },
     desert_palace(book, power_glove, boots, lantern, fire_rod, flute, titans_mitt, mirror) {
         if ((book) || (flute && titans_mitt && mirror)) {
@@ -18,7 +15,10 @@ const dng_func = {
                 } else {
                     return this.beatable('DP');
                 }
-            }
+            } else {
+                return this.accessible('DP')
+            } 
+            
         }
     },
     tower_of_hera(lantern, fire_rod, fighter_sword, hammer, mirror, power_glove, hookshot, flute) {
@@ -40,6 +40,8 @@ const dng_func = {
                 return this.beatable('POD');
             }
         }
+
+        return this.accessible('POD');
     },
     swamp_palace(hookshot, flippers, hammer, mirror) {
         if (hookshot && flippers && hammer && mirror) {
@@ -50,11 +52,15 @@ const dng_func = {
         if (fighter_sword && fire_rod) {
             return this.unlocked('SW'); 
         }
+
+        return this.accessible('SW');
     },
     thieves_town(hammer) {
         if (hammer) {
             return this.unlocked('TT'); 
         }
+
+        return this.accessible('TT');
     },
     ice_palace(hammer, flippers, titans_mitt, hookshot, fire_rod, bombos) {
         if (hammer && titans_mitt && hookshot) {
@@ -68,9 +74,11 @@ const dng_func = {
         }
     },
     misery_mire(cane_of_somaria, lantern, titans_mitt, flute, hookshot, boots) {
-            if (cane_of_somaria && lantern && flute && titans_mitt) {
-                if (hookshot || boots) {
+            if ( (hookshot || boots) && lantern && flute && titans_mitt) {
+                if (cane_of_somaria) {
                     return this.unlocked('MM')
+                } else {
+                    return this.accessible('MM')
                 }
             }
     
@@ -83,11 +91,6 @@ const dng_func = {
                     return this.beatable('TR')
                 }
             }
-    },
-    ganons_tower(boots, hammer, hookshot, cane_of_somaria, fire_rod, bow) {
-        if (boots && hammer && hookshot && cane_of_somaria && fire_rod && bow) {
-            this.beatable('GT')
-        }
     },
     accessible(name) {
         // eslint-disable-next-line array-callback-return

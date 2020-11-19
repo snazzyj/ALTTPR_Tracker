@@ -49,11 +49,9 @@ const dw_loc_func = {
             return this.unlocked('Pyramid Ledge');
         }
     },
-    spike_cave(power_glove, magic_cape, cane_of_bryna) {
-        if(power_glove) {
-            if(magic_cape || cane_of_bryna) {
+    spike_cave(hammer, power_glove, magic_cape, cane_of_byrna) {
+        if(power_glove && hammer && (magic_cape || cane_of_byrna)) {
                 return this.unlocked('Spike Cave');
-            }
         }
     },
     super_bunny(hookshot) {

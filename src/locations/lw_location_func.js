@@ -60,7 +60,7 @@ const lw_loc_func = {
     },
     lake_hylia(mirror) {
         if(mirror) {
-            return this.unlocked('Lake Hylia')
+            return this.unlocked('Lake Hylia Island')
         }
     },
     hobo(flippers) {
@@ -172,6 +172,7 @@ const lw_loc_func = {
         }
     },
     accessible(name) {
+        // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
             if (loc.name === name) {
                 return loc.status = 'accessible' 
