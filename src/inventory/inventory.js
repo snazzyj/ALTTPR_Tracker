@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Icons from './icon_import';
 import Upgradable_Items from './icon_upgrades_import';
 import ALTTPRContext from '../ALTTPRContext';
 
@@ -67,7 +66,7 @@ class Inventory extends Component {
     }
 
     render() {
-        const { handleInventory } = this.context;
+        const { handleInventory, inventory } = this.context;
         const { upgradable_items, armor_idx, sword_idx, shield_idx } = this.state;
         let swordName = upgradable_items.sword[sword_idx].name;
         let swordSrc = upgradable_items.sword[sword_idx].src;
@@ -79,7 +78,7 @@ class Inventory extends Component {
         let armorSrc = upgradable_items.armor[armor_idx].src;
         return (
             <section className="inv">
-                {Icons.map((icon) => {
+                {inventory.map((icon) => {
                     return <button key={icon.name} onClick={e => handleInventory(icon.name)} >
                         <img src={icon.src} alt={icon.name} className={` ${icon.class} ${icon.found ? 'color' : 'gray'}`} />
                     </button>

@@ -6,7 +6,9 @@ import Icons from '../src/inventory/icon_import';
 import Dng_Icons from '../src/dungeons/dungeon_import';
 import Dng_Func from '../src/dungeons/dng_func';
 import LW_Func from '../src/locations/lw_location_func';
+import LW_Loc from '../src/locations/lw_loc_import';
 import DW_Func from '../src/locations/dw_location_func';
+import DW_Loc from '../src/locations/dw_loc_import';
 import ALTTPRContext from './ALTTPRContext';
 
 import './App.css';
@@ -15,9 +17,68 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      inventory: Icons,
-      Dng_Icons,
-      crystal_count: 0,
+      inventory: this.getInitalInvState(),
+      dungeons: this.getInitalDngState(),
+      crystal_count: this.getCrystalCount(),
+      lw_loc: this.getInitialLWLoc(),
+      dw_loc: this.getInitialDWLoc()
+    }
+  }
+  
+  getInitalInvState = () => {
+    const prevSave = JSON.parse(localStorage.getItem('save_state'))
+    
+    if(prevSave) {
+      return prevSave.inventory
+    } else {
+      return Icons
+    }
+  }
+
+  getInitalDngState = () => {
+    const prevSave = JSON.parse(localStorage.getItem('save_state'))
+    
+    if(prevSave) {
+      return prevSave.dungeons
+    } else {
+      return Dng_Icons
+    }
+  }
+
+  getCrystalCount = () => {
+    const prevSave = JSON.parse(localStorage.getItem('save_state'))
+    
+    if(prevSave) {
+      return prevSave.crystal_count
+    } else {
+      return 0
+    }
+  }
+
+  getInitialLWLoc = () => {
+    const prevSave = JSON.parse(localStorage.getItem('save_state'))
+    
+    if(prevSave) {
+      return prevSave.lw_loc
+    } else {
+      return LW_Loc
+    }
+  }
+
+  getInitialDWLoc = () => {
+    const prevSave = JSON.parse(localStorage.getItem('save_state'))
+    
+    if(prevSave) {
+      return prevSave.dw_loc
+    } else {
+      return DW_Loc
+    }
+  }
+
+  saveStatus = () => {
+    const prevSave = JSON.parse(localStorage.getItem('save_state'))
+    if(prevSave !== this.state) {
+      localStorage.setItem('save_state', JSON.stringify(this.state))
     }
   }
 
@@ -80,6 +141,8 @@ class App extends Component {
         if (TR) { this.setState({ TR: TR.status }) }
       }
     }
+
+    this.saveStatus();
   }
 
   checkLocLogic = () => {
@@ -91,7 +154,7 @@ class App extends Component {
     const { hasBoots, hasHammer, hasPower_Glove, hasTitans_Mitt, hasFlippers, hasMoon_Pearl,
       hasMagic_Powder, hasLantern, hasMagic_Cape, hasMirror, hasBook,
       hasFighter_Sword, hasMaster, hasAgahnim, hasShovel, hasMushroom, hasHookshot,
-      hasFlute, hasBottle, Dng_Icons } = this.state;
+      hasFlute, hasBottle, dungeons } = this.state;
 
     let MSP = LW_Func.master_sword_pedestal(hasBook);
     let LJ = LW_Func.lumberjack(hasAgahnim);
@@ -158,10 +221,12 @@ class App extends Component {
       }
     }
 
-    if (Dng_Icons[9].status === 'beatable' || Dng_Icons[9].status === 'unlocked') {
+    if (dungeons[9].status === 'beatable' || dungeons[9].status === 'unlocked') {
       let MC = LW_Func.mimic_cave(hasMirror)
       if (MC) { this.setState({MC : MC.status}) };
     }
+
+    this.saveStatus();
   }
 
   dw_locations = () => {
@@ -169,13 +234,13 @@ class App extends Component {
       hasMoon_Pearl, hasFlute, hasAgahnim, hasMagic_Cape, hasCane_of_Byrna } = this.state;
     
     let PL = DW_Func.pyramid_ledge(hasHammer, hasPower_Glove, hasMoon_Pearl, hasAgahnim);
-
-    console.log(PL)
+    let CF = DW_Func.catfish(hasPower_Glove, hasHammer, hasMoon_Pearl, hasAgahnim, hasTitans_Mitt);
     
     if (PL) { this.setState({PL: PL.status}) };
+    if (CF) { this.setState({CF: CF.status}) };
 
     if (hasMoon_Pearl) {
-      if (hasTitans_Mitt || (hasPower_Glove && hasHammer) || hasAgahnim) {
+      if (hasTitans_Mitt || (hasPower_Glove && hasHammer) || (hasAgahnim && (hasHookshot || hasHammer))) {
 
         let BC = DW_Func.bumper_cave(hasMagic_Cape);
         let TG = DW_Func.treasure_game();
@@ -191,9 +256,6 @@ class App extends Component {
         let DW_SC = DW_Func.spike_cave(hasHammer, hasPower_Glove, hasMagic_Cape, hasCane_of_Byrna);
         let SB = DW_Func.super_bunny(hasHookshot);
         let HS = DW_Func.hookshot_cave(hasHookshot);
-        let CF = DW_Func.catfish(hasTitans_Mitt);
-
-        console.log(TG)
         
         if (BC) { this.setState({BC: BC.status}) };
         if (TG) { this.setState({TG: TG.status}) };
@@ -209,22 +271,26 @@ class App extends Component {
         if (DW_SC) { this.setState({DW_SC: DW_SC.status}) };
         if (SB) { this.setState({SB: SB.status}) };
         if (HS) { this.setState({HS: HS.status}) };
-        if (CF) { this.setState({CF: CF.status}) };
       }
     }
+
+    this.saveStatus();
   }
 
   incrementCrystalCount = () => {
     const { crystal_count } = this.state;
     this.setState({
       crystal_count: crystal_count + 1
-    })
+    }) 
   }
 
   render() {
     console.log(this.state)
     const contextValue = {
-      inventory: this.state,
+      inventory: this.state.inventory,
+      dungeons: this.state.dungeons,
+      lw_loc: this.state.lw_loc,
+      dw_loc: this.state.dw_loc,
       handleInventory: this.handleInventory,
       incrementCrystalCount: this.incrementCrystalCount
     }

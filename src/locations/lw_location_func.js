@@ -174,7 +174,7 @@ const lw_loc_func = {
     accessible(name) {
         // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
-            if (loc.name === name) {
+            if (loc.status !== 'hidden' && loc.name === name) {
                 return loc.status = 'accessible' 
             }
         })
@@ -182,7 +182,7 @@ const lw_loc_func = {
     visible(name) {
         // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
-            if (loc.name === name) {
+            if (loc.status !== 'hidden' && loc.name === name) {
                 return loc.status = 'visible' 
             }
         })
@@ -190,7 +190,7 @@ const lw_loc_func = {
     unlocked(name) {
         // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
-            if (loc.name === name) {
+            if (loc.status !== 'hidden' && loc.name === name) {
                 return loc.status = 'unlocked' 
             }
         })
@@ -198,7 +198,7 @@ const lw_loc_func = {
     beatable(name) {
         // eslint-disable-next-line array-callback-return
         return LW_Loc.find((loc) => {
-            if (loc.name === name) {
+            if (loc.status !== 'hidden' && loc.name === name) {
                 return loc.status = 'beatable' 
             }
         })

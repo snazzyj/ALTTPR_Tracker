@@ -95,9 +95,10 @@ class Dungeons extends Component {
 
     render() {
         const { mm_index, tr_index, expanded, expanded_index } = this.state;
+        const {dungeons} = this.context
         return (
             <section className="dng_list">
-                {Dng_Icons.map((dng, index) => {
+                {dungeons.map((dng, index) => {
                     return (
                         <div className='dng' key={dng.nickname}>
                             <div className={dng.status}></div>

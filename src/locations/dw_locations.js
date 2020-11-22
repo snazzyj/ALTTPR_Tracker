@@ -1,8 +1,10 @@
 import React, {Component, Fragment} from 'react';
-import dw_loc from './dw_loc_import';
+// import dw_loc from './dw_loc_import';
+import ALTTPRContext from '../ALTTPRContext';
 import './dw_loc.css';
 
 class DW_Locations extends Component {
+    static contextType = ALTTPRContext;
     constructor() {
         super();
         this.state = {hover: {}}
@@ -21,6 +23,7 @@ class DW_Locations extends Component {
     }
 
     hideLocation = (name) => {
+        const {dw_loc} = this.context;
         // eslint-disable-next-line array-callback-return
         dw_loc.find((loc) => {
             if(loc.name === name) {
@@ -29,8 +32,17 @@ class DW_Locations extends Component {
         })
     }
 
+    setClassName = (loc) => {
+        if(loc.status === 'hidden') {
+            return loc.status
+        } else {
+            return loc.class + ' ' + loc.status
+        }
+    }
+
     render() {
         const {hover} = this.state;
+        const {dw_loc} = this.context;
         return (
             <Fragment>
                 {dw_loc.map((loc, index) => {
@@ -38,7 +50,7 @@ class DW_Locations extends Component {
                     onMouseEnter={() => this.handleMouseEnter(index)} 
                     onMouseLeave={() => this.handleMouseLeave(index)}
                     onClick={() => this.hideLocation(loc.name)}
-                    className={`${loc.class} ${loc.status}`}>
+                    className={this.setClassName(loc)}>
                             {hover[index] ?
                                 <div className="tooltip">   
                                     <span className="loc_name">{loc.name}</span>
