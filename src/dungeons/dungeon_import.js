@@ -64,6 +64,8 @@ import TR_1F from '../assests/map/turtlerock-1f.gif';
 import TR_B1 from '../assests/map/turtlerock-b1.gif';
 import TR_B2 from '../assests/map/turtlerock-b2.gif';
 import TR_B3 from '../assests/map/turtlerock-b3.gif';
+//Small Chest Icon
+import SmallChest from '../assests/icons/ALttP_Treasure_Chest_Sprite.png';
 
 const dng_icons = [
     {
@@ -103,7 +105,9 @@ const dng_icons = [
                 floor: 'Floor 2',
                 src: EP_2F
             }
-        ]
+        ],
+        smallKeys: 2,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Desert_Palace',
@@ -146,7 +150,9 @@ const dng_icons = [
                 floor: 'Floor 2',
                 src: DP_2F
             }
-        ]
+        ],
+        smallKeys: 4,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Tower_of_Hera',
@@ -201,7 +207,9 @@ const dng_icons = [
                 floor: 'Floor 6',
                 src: ToH_6F
             }
-        ]
+        ],
+        smallKeys: 1,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Palace_of_Darkness',
@@ -240,7 +248,9 @@ const dng_icons = [
                 floor: 'Basement 1',
                 src: PoD_B1
             }
-        ]
+        ],
+        smallKeys: 6,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Swamp_Palace',
@@ -283,7 +293,9 @@ const dng_icons = [
                 floor: 'Basement 2',
                 src: SP_B2
             }
-        ]
+        ],
+        smallKeys: 5,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Skull_Woods',
@@ -326,7 +338,9 @@ const dng_icons = [
                 floor: 'Basement 2',
                 src: SW_B2
             }
-        ]
+        ],
+        smallKeys: 5,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Thieves_Town',
@@ -369,7 +383,9 @@ const dng_icons = [
                 floor: 'Basement 2',
                 src: TT_B2
             }
-        ]
+        ],
+        smallKeys: 3,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Ice_Palace',
@@ -437,7 +453,9 @@ const dng_icons = [
                 src: IP_B7
 
             }
-        ]
+        ],
+        smallKeys: 6,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Misery_Mire',
@@ -484,7 +502,9 @@ const dng_icons = [
                 floor: 'Basement 2',
                 src: MM_B2
             },
-        ]
+        ],
+        smallKeys: 6,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     },
     {
         name: 'Turtle_Rock',
@@ -531,7 +551,9 @@ const dng_icons = [
                 floor: 'Basement 3',
                 src: TR_B3
             },
-        ]
+        ],
+        smallKeys: 6,
+        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
     }
 ]
 

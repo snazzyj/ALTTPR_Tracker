@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import Dng_Icons from './dungeon_import';
 import Medallions from './medallion';
+import Compass from '../assests/icons/CompassALttP.png';
+import Dng_Map from '../assests/icons/ALttP_Dungeon_Map_Sprite.png';
+import BigKey from '../assests/icons/BigKey.png';
+import SmallKey from '../assests/icons/SmallKey.png';
 import ALTTPRContext from '../ALTTPRContext';
 
 class Dungeons extends Component {
@@ -12,7 +16,9 @@ class Dungeons extends Component {
         this.state = {
             mm_index: 0,
             tr_index: 0,
-            expanded: false
+            expanded: false,
+            smallKeyAmt: 0,
+            smallChestArr: []
         }
     }
 
@@ -77,11 +83,13 @@ class Dungeons extends Component {
         })
     }
 
-    expandDungeon = (i) => {
+    expandDungeon = (i, smallKeys, chests) => {
         const { expanded } = this.state
         this.setState({
             expanded: !expanded,
-            expanded_index: i
+            expanded_index: i,
+            smallKeyAmt: smallKeys,
+            smallChestArr: [...chests]
         })
     }
 
@@ -93,22 +101,39 @@ class Dungeons extends Component {
         };
     };
 
+    decreaseSmallKey = () => {
+        const {smallKeyAmt} = this.state;
+        if(smallKeyAmt !== 0) {
+            this.setState({ smallKeyAmt: this.state.smallKeyAmt - 1 })
+        } else {
+            this.setState({ smallKeyAmt: 0 })
+        }
+    }
+
+    removechest = (array) => {
+        array.pop();
+        this.setState({
+            smallChestArr: array
+        })
+    }
+
     render() {
-        const { mm_index, tr_index, expanded, expanded_index } = this.state;
-        const {dungeons} = this.context
+        const { mm_index, tr_index, expanded, expanded_index, smallKeyAmt, smallChestArr } = this.state;
+        const { dungeons } = this.context
+        console.log(this.state)
         return (
             <section className="dng_list">
                 {dungeons.map((dng, index) => {
                     return (
                         <div className='dng' key={dng.nickname}>
                             <div className={dng.status}></div>
-                            <button onClick={() => this.expandDungeon(index)} className="dngBtn">
+                            <button onClick={() => this.expandDungeon(index, dng.smallKeys, dng.numOfChests)} className="dngBtn">
                                 <img src={dng.src} alt={dng.nickname} className={dng.default_class} />
                             </button>
-                            <button onClick={e => this.changeRewardIndex(dng.name)} className="dng_reward">
+                            <button onClick={() => this.changeRewardIndex(dng.name)} className="dng_reward">
                                 <img src={dng.reward[dng.index].src} alt={dng.reward[dng.index].name} />
                             </button>
-                            <button onClick={e => this.setCompletionStatus(dng.boss_name)} className="boss_icon">
+                            <button onClick={() => this.setCompletionStatus(dng.boss_name)} className="boss_icon">
                                 <img src={dng.boss_icon} alt={dng.boss_name} className={dng.isComplete ? 'color' : 'gray'} />
                             </button>
                             {dng.nickname === 'MM' &&
@@ -124,7 +149,27 @@ class Dungeons extends Component {
                 })}
                 {expanded ?
                     <div className="expanded" ref={this.container}>
-                        {Dng_Icons[expanded_index].map_icons.map((icon, index) => {
+                        <div className="expandedHeader">
+                            <button>
+                                <img src={Compass} alt="Compass" />
+                            </button>
+                            <button>
+                                <img src={Dng_Map} alt="Dungeon Map" />
+                            </button>
+                            <button>
+                                <img src={BigKey} alt="Big Key" />
+                            </button>
+                            <button onClick={() => this.decreaseSmallKey(dungeons[expanded_index])}>
+                                <img src={SmallKey} alt="Small Key" /> <span>{smallKeyAmt}</span>
+                            </button>
+                            <button onClick={() => this.removechest(smallChestArr)}>
+                                {smallChestArr.map((chest, i) => {
+                                    return <img src={chest} alt="Small Chest" key={i} />
+                                })}
+                            </button>
+                        </div>
+
+                        {dungeons[expanded_index].map_icons.map((icon, index) => {
                             return <Fragment key={index}>
                                 <h3>{icon.floor}</h3>
                                 <img src={icon.src} alt={icon.floor} />
