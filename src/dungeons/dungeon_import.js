@@ -66,6 +66,10 @@ import TR_B2 from '../assests/map/turtlerock-b2.gif';
 import TR_B3 from '../assests/map/turtlerock-b3.gif';
 //Small Chest Icon
 import SmallChest from '../assests/icons/ALttP_Treasure_Chest_Sprite.png';
+import Compass from '../assests/icons/CompassALttP.png';
+import Dng_Map from '../assests/icons/ALttP_Dungeon_Map_Sprite.png';
+import BigKey from '../assests/icons/BigKey.png';
+import SmallKey from '../assests/icons/SmallKey.png';
 
 const dng_icons = [
     {
@@ -106,8 +110,14 @@ const dng_icons = [
                 src: EP_2F
             }
         ],
-        smallKeys: 2,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 0,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 2, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Desert_Palace',
@@ -150,9 +160,15 @@ const dng_icons = [
                 floor: 'Floor 2',
                 src: DP_2F
             }
-        ],
-        smallKeys: 4,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest]
+        ],        
+        dng_inv: [{
+            index: 1,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 4, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Tower_of_Hera',
@@ -208,8 +224,14 @@ const dng_icons = [
                 src: ToH_6F
             }
         ],
-        smallKeys: 1,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 2,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 1, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest]
+        }]
     },
     {
         name: 'Palace_of_Darkness',
@@ -248,9 +270,15 @@ const dng_icons = [
                 floor: 'Basement 1',
                 src: PoD_B1
             }
-        ],
-        smallKeys: 6,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        ],        
+        dng_inv: [{
+            index: 3,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 6, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Swamp_Palace',
@@ -293,9 +321,15 @@ const dng_icons = [
                 floor: 'Basement 2',
                 src: SP_B2
             }
-        ],
-        smallKeys: 5,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        ],       
+        dng_inv: [{
+            index: 4,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 5, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Skull_Woods',
@@ -339,8 +373,14 @@ const dng_icons = [
                 src: SW_B2
             }
         ],
-        smallKeys: 5,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 5,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 5, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Thieves_Town',
@@ -384,8 +424,14 @@ const dng_icons = [
                 src: TT_B2
             }
         ],
-        smallKeys: 3,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 6,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 3, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Ice_Palace',
@@ -454,8 +500,14 @@ const dng_icons = [
 
             }
         ],
-        smallKeys: 6,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 7,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 6, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Misery_Mire',
@@ -503,8 +555,14 @@ const dng_icons = [
                 src: MM_B2
             },
         ],
-        smallKeys: 6,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 8,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 6, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     },
     {
         name: 'Turtle_Rock',
@@ -552,8 +610,14 @@ const dng_icons = [
                 src: TR_B3
             },
         ],
-        smallKeys: 6,
-        numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest]
+        dng_inv: [{
+            index: 9,
+            compass: {found: false, src: Compass},
+            dng_map: {found: false, src: Dng_Map},
+            bigKey: {found: false, src: BigKey},
+            smallKeys: {amt: 6, src: SmallKey},
+            numOfChests: [SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest,SmallChest],
+        }]
     }
 ]
 
