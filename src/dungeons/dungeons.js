@@ -1,10 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Dng_Icons from './dungeon_import';
 import Medallions from './medallion';
-// import Compass from '../assests/icons/CompassALttP.png';
-// import Dng_Map from '../assests/icons/ALttP_Dungeon_Map_Sprite.png';
-// import BigKey from '../assests/icons/BigKey.png';
-// import SmallKey from '../assests/icons/SmallKey.png';
 import ALTTPRContext from '../ALTTPRContext';
 
 class Dungeons extends Component {
