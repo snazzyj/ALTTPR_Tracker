@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ALTTPR Tracker
 
-## Available Scripts
+## How to Install
+1. Clone Repository
+2. npm install
+3. npm run
 
-In the project directory, you can run:
+## About this tracker
+This is a tracker for A Link to the Past Randomizer. It was built for both new players and veterans alike.  
 
-### `npm start`
+## Features
+1. Light + Dark World locations available on an enlarged map -> Locations will turn green when they are fully accessible based on logic and what the player has collected in their inventory.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Players can set each dungeon's reward (Crystal or 1 of 3 Pendants). Users can click on the dungeon picture to get the overview map of that dungeon.  Clicking on the boss icon will mark it complete and increase the players crystal count.  Players can also the medallion requirements for Misery Mire and Turtle Rock
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Reading the Map
+There are 5 different color statuses for locations and dungeons
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Color | Status | What it means |
+| --- | --- | --- |
+| `Red` | Locked | Nothing can be done |
+| `Blue` | Visible | Cannot be collected |
+| `Orange` | Accessible | Cannot collect all items or beat dungeon |
+| `Yellow` | Beatable | Can collect all items and beat dungeon but may be out of logic |
+| `Green` | Unlocked  | Fully unlocked, meets all Logic requirements |
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Built With
+1. React
+2. Javascript
+3. CSS

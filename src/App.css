@@ -99,6 +99,7 @@ button {
 
 .dng_list > div {
   margin: 5px;
+  padding: 5px;
 }
 
 .dng_reward {
@@ -166,7 +167,9 @@ button {
 }
 
 .lw, .dw {
-  width: 45%;
+  max-width: 843px;
+  min-width: 843px;
+  /* width: 45%; */
   margin: 10px;
   position: relative;
 }
