@@ -11,7 +11,7 @@ This is a tracker for A Link to the Past Randomizer. It was built for both new p
 ## Features
 1. Light + Dark World locations available on an enlarged map -> Locations will turn green when they are fully accessible based on logic and what the player has collected in their inventory.
 
-2. Players can set each dungeon's reward (Crystal or 1 of 3 Pendants). Users can click on the dungeon picture to get the overview map of that dungeon.  Clicking on the boss icon will mark it complete and increase the players crystal count.  Players can also the medallion requirements for Misery Mire and Turtle Rock
+2. Players can set each dungeon's reward (Crystal or 1 of 3 Pendants). Users can click on the dungeon picture to get the overview map of that dungeon.  Clicking on the boss icon will mark it complete and increase the players crystal count.  Players can also set the medallion requirements for Misery Mire and Turtle Rock
 
 ## Reading the Map
 There are 5 different color statuses for locations and dungeons
