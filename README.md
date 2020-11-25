@@ -13,6 +13,8 @@ This is a tracker for A Link to the Past Randomizer. It was built for both new p
 
 2. Players can set each dungeon's reward (Crystal or 1 of 3 Pendants). Users can click on the dungeon picture to get the overview map of that dungeon.  Clicking on the boss icon will mark it complete and increase the players crystal count.  Players can also set the medallion requirements for Misery Mire and Turtle Rock
 
+3. Autosave's state into local storage after the player clicks on an inventory item.
+
 ## Reading the Map
 There are 5 different color statuses for locations and dungeons
 
